@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        @font-face {
+            font-family: Mermaid Swash Caps;
+            src: url(Mermaid\ Swash\ Caps.ttf) format('truetype');
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .side-menu {
+        width: 5.208%;
+        background-color: #EDEDED;
+        display: flex;
+        min-height: 500px;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+        position: fixed;
+    
+        top: 0;
+        left: 0;
+        height: 100vh;
+        min-width: 60px;
+    }
+
+    .side-menu .icon-button:hover {
+        background-color: #ccc;
+    }
+    .menu-button {
+        
+        position: absolute;
+        left: 10%;
+        right: 15%;
+        top: 9.26%;
+        bottom: 84.81%;
+        width: 60%;
+        height: 7%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        background: linear-gradient(90deg, #DEDEDE 0%, #FFFFFF 59%, #FFFFFF 100%);
+        transition: transform 400ms ease-in-out;
+        margin: 0 auto; 
+
+        }
+
+        .menu-button:active {
+        transform: scale(0.45);
+        }
+
+        .menu-btn {
+
+        align-items: center;
+        justify-content: center;
+        }
+        .menu-icon {
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        top: 44.62%;
+        bottom: 46.15%;
+        width: 55%;
+
+        }
+
+        .brand-logo {
+
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        top: 23.44%;
+        bottom: 53.54%;
+        width: 45%;
+        height: 25%;
+
+        }
+        .fb-icon-container
+        {
+        position: absolute;
+        left: 18%;
+        right: 18%;
+        top: 53.06%;
+        bottom: 41.02%;
+        width: 65%;
+        height: 6%;
+        }
+        .insta-icon-container
+        {
+        position: absolute;
+        left: 18%;
+        right: 18%;
+        top: 62.31%;
+        bottom: 31.76%;
+        width: 65%;
+        height: 6%;
+        }
+
+        .x-icon-container
+        {
+        position: absolute;
+        left: 18%;
+        right: 18%;
+        top: 71.57%;
+        bottom: 22.5%;
+        width: 65%;
+        height: 6%;
+        
+        }
+        .login-button-area
+        {
+
+        
+
+        }
+        .loginicon{
+        position: absolute;
+        left: 18%;
+        right: 18%;
+        top: 82.5%;
+        bottom: 12.04%;
+        width: 65%;
+        height: 6%;
+        transition: transform 400ms ease-in-out;
+
+        }
+        .loginicon .icon-ellipse-outer{
+        border: 1px solid #304557;
+        
+        }
+        .loginicon .icon-ellipse-inner{
+        background: linear-gradient(180deg, #A67F29 0%, #E89F00 100%);   
+        }
+
+        .icon-ellipse-inner
+        {
+        position: absolute;
+        width:85%;
+        height: 85%;
+        left: 8%;
+        right: 10%;
+        top: 7%;
+        bottom: 7%;
+
+        background-color: #304557;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        }
+
+        .icon-ellipse-outer
+        {
+        box-sizing: border-box;
+        position: absolute;
+        width: 85%;
+        height: 100%;
+
+        left: 0%;
+        right: 0%;
+        border-radius: 50%;
+        border: 1px solid #A67F29;
+
+
+        }
+        .svg-icon-login
+        {
+        width: 50%;
+        height: 55%;  
+        }
+        .icon
+        {
+        width: 50%;
+        height: 50%;
+        }
+        .arrow-icon {
+        position: absolute;
+        right: 1%;
+        bottom: 6%;
+        width: 8%;
+        height: 8%;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+
+        }
+        .arrow-vector-icon {
+        position: absolute;
+        right: 2%;
+        bottom: 7%;
+        width: 6%;
+        height: 6%;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        
+        }
+
+        @keyframes fadeOut {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        }
+        .arrow-vector-icon.active {
+        animation: fadeOut 1000ms ease-in-out forwards;
+        }
+        .page-container, .services-section .page-container, .footer-section .content {
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        }
+        .arrow-icon.active {
+        animation: fadeOut 1000ms ease-in-out forwards;
+        }
+        .background-hero {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('white-background.jpeg');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+        .hero-section {
+            position: absolute;
+            width: 75vw;
+            aspect-ratio: 4 / 2;
+            margin: 0 auto;
+            left: 10vw;
+            background-image: url('hero-images/hero-images-bgs/alt-image-1.png');
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-out;
+       
+        }
+        .title-text {
+            position: absolute;
+            bottom: -24%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            font-size: 3vw;
+            color: #304557;
+            text-align: center;
+            font-family: 'Mermaid Swash Caps';
+        }
+        
+        @font-face {
+        font-family: Mermaid Swash Caps;
+        src: url(Mermaid\ Swash\ Caps.ttf) format('truetype');
+        }
+        .beauty-word{
+            font-family: 'Mermaid Swash Caps';
+        }
+        .beauty-word2{
+            font-family: 'Mermaid Swash Caps';
+            color: #E89F00;
+        }
+        /* Animations */
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        @keyframes slideIn {
+            from { 
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }       
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0px;
+            position: relative;
+            width: 108%;
+            height: 105%;
+            animation: slideIn 400ms ease-out;
+        }
+
+        .grid-item {
+           
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            animation: slideIn 1200ms ease-in-out;
+        }
+
+        .arrow-button {
+            position: fixed;
+            bottom: 40px; /* Distance from bottom of screen */
+            right: 40px; /* Distance from right side of screen */
+            z-index: 999; /* Ensures it stays above other content */
+            cursor: pointer;
+        }
+
+        .arrow-ellipse {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px; /* Outer ellipse size */
+            height: 50px;
+            
+            background-color: #EDEDED; /* Ellipse color */
+            border-radius: 50%;
+            padding: 0;
+        }
+
+        .arrow-icon {
+            width: 30px; /* Inner arrow size */
+            height: 30px;
+            right: 18%;
+            bottom:13%;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+        .no-animation {
+        animation: none !important;
+        transition: none !important;
+}   
+        .arrow-button:hover .arrow-ellipse {
+           /* Hover effect on ellipse */
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="side-menu">
+        <div class="menu-button" onclick="navigateToContact()">
+            <div class="ellipse"></div>
+            <div class="menu-btn">
+                <img src="menu-icon.png" alt="menu icon" class="menu-icon">
+            </div>
+        </div>
+        
+        <img src="sanz beauty logo.png" alt="Brand Logo" class="brand-logo">
+     
+        <div class="fb-icon-container" >
+            <div class="icon-ellipse-outer">
+                <div class="icon-ellipse-inner">
+                    <img src="fb-icon.svg" alt="svg-icon" class="icon"/>
+                </div>
+            </div>
+        </div>
+        <div class="insta-icon-container" >
+            <div class="icon-ellipse-outer">
+                <div class="icon-ellipse-inner">
+                    <img src="insta-icon.svg" alt="svg-icon" class="icon"/>
+                </div>
+            </div>
+        </div>
+        <div class="x-icon-container" >
+            <div class="icon-ellipse-outer">
+                <div class="icon-ellipse-inner">
+                <img src="x-icon.svg" alt="svg-icon" class="icon"/>
+            </div>
+            </div>
+        </div>
+        
+            <div class="loginicon">
+            <div class="icon-ellipse-outer">
+                <div class="icon-ellipse-inner">
+                  
+    
+                    <svg class="svg-icon-login"  viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.9434 0.250001C12.5759 0.249981 11.4735 0.249961 10.6066 0.366521C9.70645 0.487541 8.94853 0.746431 8.34662 1.34835C7.82168 1.87328 7.55644 2.51836 7.41721 3.27635C7.28192 4.01291 7.25604 4.9143 7.25001 5.99583C7.24771 6.41003 7.58162 6.74768 7.99583 6.74999C8.41004 6.7523 8.74769 6.41838 8.74999 6.00418C8.75608 4.91068 8.78448 4.1356 8.89253 3.54735C8.99664 2.98054 9.16385 2.65246 9.40725 2.40901C9.68405 2.13225 10.0727 1.9518 10.8064 1.85315C11.5618 1.75159 12.5629 1.75 13.9983 1.75H14.9983C16.4337 1.75 17.4348 1.75159 18.1902 1.85315C18.924 1.9518 19.3125 2.13225 19.5893 2.40901C19.8661 2.68577 20.0465 3.07435 20.1452 3.80812C20.2467 4.56347 20.2483 5.56459 20.2483 7V15C20.2483 16.4354 20.2467 17.4365 20.1452 18.1919C20.0465 18.9257 19.8661 19.3142 19.5893 19.591C19.3125 19.8678 18.924 20.0482 18.1902 20.1469C17.4348 20.2484 16.4337 20.25 14.9983 20.25H13.9983C12.5629 20.25 11.5618 20.2484 10.8064 20.1469C10.0727 20.0482 9.68405 19.8678 9.40725 19.591C9.16385 19.3475 8.99664 19.0195 8.89253 18.4527C8.78448 17.8644 8.75608 17.0893 8.74999 15.9958C8.74769 15.5816 8.41004 15.2477 7.99583 15.25C7.58162 15.2523 7.24771 15.59 7.25001 16.0042C7.25604 17.0857 7.28192 17.9871 7.41721 18.7236C7.55644 19.4816 7.82168 20.1267 8.34662 20.6517C8.94853 21.2536 9.70645 21.5125 10.6066 21.6335C11.4735 21.75 12.5759 21.75 13.9434 21.75H15.0532C16.4208 21.75 17.5231 21.75 18.3901 21.6335C19.2902 21.5125 20.048 21.2536 20.65 20.6517C21.2519 20.0497 21.5108 19.2919 21.6318 18.3918C21.7484 17.5248 21.7483 16.4225 21.7483 15.0549V6.94513C21.7483 5.57754 21.7484 4.47522 21.6318 3.60825C21.5108 2.70814 21.2519 1.95027 20.65 1.34835C20.048 0.746431 19.2902 0.487541 18.3901 0.366521C17.5231 0.249961 16.4208 0.249981 15.0532 0.250001H13.9434Z" fill="white"/>
+                        <path d="M1 10.249C0.58578 10.249 0.25 10.5848 0.25 10.999C0.25 11.4132 0.58578 11.749 1 11.749H12.9725L11.0119 13.4296C10.6974 13.6991 10.661 14.1726 10.9305 14.4871C11.2001 14.8016 11.6736 14.838 11.9881 14.5685L15.4881 11.5685C15.6543 11.426 15.75 11.218 15.75 10.999C15.75 10.7801 15.6543 10.5721 15.4881 10.4296L11.9881 7.42959C11.6736 7.16003 11.2001 7.19645 10.9305 7.51094C10.661 7.82544 10.6974 8.29891 11.0119 8.56848L12.9725 10.249H1Z" fill="white"/>
+                        </svg>
+    
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="arrow-button" onclick="navigateToNextPage()">
+           
+                <img src="arrrow-down.svg" class="arrow-ellipse"  />
+                <img src="down-arrow.svg" class="arrow-icon" />
+            </div>
+        </div>
+    <div class="background-hero"></div>
+    <div class="hero-section">
+        <div class="hero-image"></div>
+        <div class="grid-container" id="grid-container">
+            <div class="grid-item" style="background-image: url('hero-images/hero-images-bgs/hero-image-2.1.png');"></div>
+            <div class="grid-item" style="background-image: url('hero-images/hero-images-bgs/hero-image-2.2.png');"></div>
+            <div class="grid-item" style="background-image: url('hero-images/hero-images-bgs/hero-image-2.3.png');"></div>
+            <div class="grid-item" style="background-image: url('hero-images/hero-images-bgs/hero-image-2.4.png');"></div>
+            <div class="grid-item" style="background-image: url('hero-images/hero-images-bgs/hero-image-2.5.png');"></div>
+            <div class="grid-item" style="background-image: url('hero-images/hero-images-bgs/hero-image-2.6.png');"></div>
+            <div class="grid-item" style="background-image: url('hero-images/hero-images-bgs/hero-image-2.7.png');"></div>
+            <div class="grid-item" style="background-image: url('hero-images/hero-images-bgs/hero-image-2.8.png');"></div>
+        </div>
+        <div class="title-text">
+            <h2>All for the sake of <span class="beauty-word">your </span><span class="beauty-word2"> beauty</span></h2>
+        </div>
+    </div>
+   
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const gridItems = document.querySelectorAll(".grid-item");
+        const gridContainer = document.querySelector(".grid-container");
+        const newImages = [
+            'hero-images/hero-images-bgs/hero-image-1.1.png',
+            'hero-images/hero-images-bgs/hero-image-1.2.png',
+            'hero-images/hero-images-bgs/hero-image-1.3.png',
+            'hero-images/hero-images-bgs/hero-image-1.4.png',
+            'hero-images/hero-images-bgs/hero-image-1.5.png',
+            'hero-images/hero-images-bgs/hero-image-1.6.png',
+            'hero-images/hero-images-bgs/hero-image-1.7.png',
+            'hero-images/hero-images-bgs/hero-image-1.8.png'
+        ];
+
+        const backgroundImages = [
+            'hero-images/hero-image-5.png',
+            'hero-images/hero-image-4.png',
+            'hero-images/hero-image-3.png',
+        ];
+        
+        const heroSection = document.querySelector(".hero-section");
+        const maxBackgroundChanges = 3;
+        let backgroundChangeCount = 0;
+
+        // Function to update grid images
+        function updateImages() {
+            gridItems.forEach((item, index) => {
+                const delay = (index + 1) * 600;
+                setTimeout(() => {
+                    item.style.transition = "opacity 0.8s ease-in-out";
+                    item.style.opacity = "0";
+                    setTimeout(() => {
+                        item.style.backgroundImage = `url('${newImages[index]}')`;
+                        item.style.opacity = "1";
+                    }, 600);
+                }, delay);
+            });
+
+            // After grid updates, fade out and change the background
+            setTimeout(() => {
+                gridItems.forEach(item => item.style.opacity = "0");
+                setTimeout(() => changeBackgroundImage(), 1000); // Wait 1 second after grid fades out
+            }, 8000); // Run after the grid update completes
+        }
+
+        let currentImageIndex = 0;
+        function changeBackgroundImage() {
+            if (backgroundChangeCount >= maxBackgroundChanges) {
+
+                heroSection.style.opacity = "0";
+               gridItems.forEach((item, index) => {
+                item.style.backgroundImage = `url('${newImages[index]}')`;
+                      item.style.opacity = "1";       
+               });
+ 
+            
+            }
+               // Stop changing background after 3 times
+
+            heroSection.style.opacity = 0;  // Fade out current image
+            setTimeout(() => {
+                currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+                heroSection.style.backgroundImage = `url(${backgroundImages[currentImageIndex]})`;
+                heroSection.style.opacity = 1;  // Fade in new image
+                backgroundChangeCount++; // Increment the background change counter
+            }, 800); // Adjust fade-out duration to match CSS transition time
+        }
+    
+        // Start rotating images every 5 seconds
+        setTimeout(() => {
+            updateImages();
+            setTimeout(() => {
+                setInterval(changeBackgroundImage, 3500);
+            }, 8000); // Change background 8 seconds after grid updates
+        }, 1500); // Start grid update after initial delay
+    });
+
+    function navigateToNextPage() {
+        // Redirect to the next page
+        window.location.href = 'index.html'; // Update with the actual URL
+    }
+
+    </script>
+</body>
+</html>
